@@ -9,6 +9,7 @@ var Assignments = new Schema ({
     },
   assignment_number: Number,
   score: Number,
+  completed: Boolean,
   date_completed: Date
 });
 
