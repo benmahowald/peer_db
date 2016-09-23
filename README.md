@@ -85,6 +85,9 @@ Create text inputs that will create assignments using the /assignments POST rout
 In your index file, display a list of all assignments that are in the database when the page loads.
 
 HARD MODE
+
 Create text inputs that will create assignments using the /assignments POST route. (When you reload the page, it should have any new entries added.)
 
-In your index file, display a list of all assignments that are in the database when the page loads.
+PRO MODE
+
+Finally, add another button to each record on the index that allows the user to update the database entry. This will also need to be done via Ajax. Updating should either be done in a modal window, or a series of inputs that shows/hides when the edit button is clicked. You will need to pass the assignment ID and the form data to a new PUT route, and to Assignments.findByIdAndUpdate, or alternatively, Assignments.findById followed by a model.save().
