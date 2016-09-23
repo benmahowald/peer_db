@@ -38,10 +38,10 @@ app.get('/', function (req, res) {
 //   var dummy = new Grading({
 //     student_name:
 //       {
-//         firstName: "dummy",
-//         lastName: "head"
+//         firstName: "George ",
+//         lastName: "Washington"
 //       },
-//     assignment_number: 1,
+//     assignment_number: 2,
 //     score: 100,
 //     completed: true,
 //     date_completed: new Date()
