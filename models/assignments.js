@@ -10,7 +10,7 @@ var Assignments = new Schema ({
   assignment_number: Number,
   score: Number,
   completed: Boolean,
-  date_completed: Date
+  date_completed: String
 });
 
 var Grading = mongoose.model('gradings', Assignments);

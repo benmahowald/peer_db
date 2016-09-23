@@ -2,9 +2,10 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var bodyParser = require('body-parser');
+app.use(bodyParser.json());
 var mongoose = require('mongoose');
 
-var port = process.env.PORT || 4952;
+var port = process.env.PORT || 2727;
 var Grading = require('../models/assignments.js');
 
 var mongoURI = 'mongodb://localhost:27017/assignments';
@@ -13,7 +14,6 @@ var MongoDB = mongoose.connect(mongoURI).connection;
 var userRouter = require('../routes/studentRoute.js');
 app.use(userRouter);
 
-app.use(bodyParser.json());
 
 // MongoDB.on('error', function (err) {
 //     console.log('mongodb connection error:', err);
@@ -35,17 +35,17 @@ app.get('/', function (req, res) {
 }); // end base url
 
 // app.get('/testAssignments', function(req, res) {
-//   var dummy = new Grading({
-//     student_name:
-//       {
-//         firstName: "George ",
-//         lastName: "Washington"
-//       },
-//     assignment_number: 2,
-//     score: 100,
-//     completed: true,
-//     date_completed: new Date()
-//   });
+  // var dummy = new Grading({
+  //   student_name:
+  //     {
+  //       firstName: "George ",
+  //       lastName: "Washington"
+  //     },
+  //   assignment_number: 2,
+  //   score: 100,
+  //   completed: true,
+  //   date_completed: new Date()
+  // });
 //
 //   dummy.save(function(err) {
 //     if(err){
